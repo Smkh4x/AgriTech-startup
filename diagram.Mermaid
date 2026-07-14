@@ -1,2 +1,66 @@
 classDiagram
-    class 
+
+class Farmer {
+    +id : int
+    +firstName : string
+    +lastName : string
+    +phone : string
+    +region : string
+    +userId : int
+}
+
+class Plot {
+    +id : int
+    +name : string
+    +area : float
+    +municipality : string
+    +farmerId : int
+}
+
+class Product {
+    +id : int
+    +name : string
+    +category : string
+    +unit : string
+}
+
+class Harvest {
+    +id : int
+    +quantity : float
+    +harvestDate : date
+    +status : string
+    +plotId : int
+    +productId : int
+}
+
+class Market {
+    +id : int
+    +name : string
+    +city : string
+    +region : string
+}
+
+class MarketPrice {
+    +id : int
+    +pricePerKg : float
+    +priceDate : date
+    +marketId : int
+    +productId : int
+}
+
+class Offer {
+    +id : int
+    +quantity : float
+    +requestedPrice : float
+    +status : string
+    +harvestId : int
+    +marketId : int
+}
+
+Farmer "1" --> "0..*" Plot
+Plot "1" --> "0..*" Harvest
+Product "1" --> "0..*" Harvest
+Market "1" --> "0..*" MarketPrice
+Product "1" --> "0..*" MarketPrice
+Harvest "1" --> "0..*" Offer
+Market "1" --> "0..*" Offer
