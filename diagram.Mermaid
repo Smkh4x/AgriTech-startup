@@ -1,2 +1,79 @@
 classDiagram
-    class 
+    class User {
+        +Integer id {PK}
+        +String email
+        +String password
+        +String role
+        +DateTime createdAt
+        +DateTime updatedAt
+    }
+    class Agriculteur {
+        +Integer id {PK}
+        +String nom
+        +String region
+        +String telephone
+        +Integer userId {FK}
+        +DateTime createdAt
+        +DateTime updatedAt
+    }
+    class Parcelle {
+        +Integer id {PK}
+        +String nom
+        +Float surface
+        +String cultureActuelle
+        +Integer agriculteurId {FK}
+        +DateTime createdAt
+        +DateTime updatedAt
+    }
+    class Produit {
+        +Integer id {PK}
+        +String nom
+        +String categorie
+        +DateTime createdAt
+        +DateTime updatedAt
+    }
+    class Marche {
+        +Integer id {PK}
+        +String nom
+        +String ville
+        +String region
+        +DateTime createdAt
+        +DateTime updatedAt
+    }
+    class PrixMarche {
+        +Integer id {PK}
+        +Integer marcheId {FK}
+        +Integer produitId {FK}
+        +Decimal prixMoyen
+        +Date dateReleve
+        +DateTime createdAt
+        +DateTime updatedAt
+    }
+    class Recolte {
+        +Integer id {PK}
+        +Integer parcelleId {FK}
+        +Integer produitId {FK}
+        +Decimal quantite
+        +Date dateRecolte
+        +String statut
+        +DateTime createdAt
+        +DateTime updatedAt
+    }
+    class Offre {
+        +Integer id {PK}
+        +Integer recolteId {FK}
+        +Decimal quantiteProposee
+        +Decimal prixDemande
+        +Date dateOffre
+        +String statut
+        +DateTime createdAt
+        +DateTime updatedAt
+    }
+
+    User "1" --> "0..1" Agriculteur : has profile
+    Agriculteur "1" --> "0..*" Parcelle : owns
+    Parcelle "1" --> "0..*" Recolte : harvested from
+    Produit "1" --> "0..*" Recolte : is type of
+    Produit "1" --> "0..*" PrixMarche : has market prices
+    Marche "1" --> "0..*" PrixMarche : records price at
+    Recolte "1" --> "0..*" Offre : listed in
