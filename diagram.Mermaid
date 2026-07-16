@@ -1,5 +1,14 @@
 classDiagram
 
+class User {
+    +id : int
+    +firstName : string
+    +lastName : string
+    +email : string
+    +password : string
+    +role : enum
+}
+
 class Farmer {
     +id : int
     +firstName : string
@@ -56,7 +65,7 @@ class Offer {
     +harvestId : int
     +marketId : int
 }
-
+User "1" --> "1" Farmer
 Farmer "1" --> "0..*" Plot
 Plot "1" --> "0..*" Harvest
 Product "1" --> "0..*" Harvest
