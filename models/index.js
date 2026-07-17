@@ -6,7 +6,7 @@ import MarketPrice from "./marketPrice.model";
 import Product from "./product.model";
 import Plot from "./plot.model";
 import Offre from "./offre.model"
-import plot from "./plot.model";
+
 
 
 User.hasOne(Farmer, {
