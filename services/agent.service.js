@@ -1,4 +1,5 @@
-'use strict';
+
+
 const { GoogleGenAI } = require('@google/genai');
 const { declarations, handlers } = require('../tools/agent.tools');
 const { systemPrompt } = require('../tools/agent.prompt');
@@ -106,7 +107,7 @@ class AgentService {
             if (!confirmed) {
               // Bypass execution, return a prompt requesting confirmation
               const targetAction = name === 'creer_recolte' ? 'enregistrer cette récolte' : 'créer cette offre de vente';
-              
+
               // We inject a virtual tool result explaining that confirmation is missing
               functionResponsesParts.push({
                 functionResponse: {
@@ -162,7 +163,6 @@ class AgentService {
       };
     }
   }
-
   /**
    * Helper to clear history for testing/resetting conversations
    */
@@ -171,5 +171,4 @@ class AgentService {
     conversationMemory.delete(sessionKey);
   }
 }
-
 module.exports = new AgentService();
