@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@google/genai": "^2.12.0",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
@@ -7,11 +8,13 @@
     "jsonwebtoken": "^9.0.3",
     "pg": "^8.22.0",
     "pg-hstore": "^2.3.4",
+    "ps": "^1.0.0",
     "sequelize": "^6.37.8"
   },
   "name": "fala7-backend",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module.cjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
