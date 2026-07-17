@@ -1,10 +1,10 @@
-import { DataTypes } from "sequelize";
-import sequelize from "../config/config";
-
-const Product = sequelize.define("product", {
+export default {
+  async up (queryInterface, Sequelize) {
+    await queryInterface.createTable('products', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
+        allowNull: false,
         autoIncrement: true
     },
     name: {
@@ -19,11 +19,11 @@ const Product = sequelize.define("product", {
         type: DataTypes.STRING,
         allowNull: true
     }
-}, {
-    tableName: "product",
-    timestamps: false
+    });
 
-}
+  },
 
-)
-export default Product
+  async down (queryInterface, Sequelize) {
+    await queryInterface.dropTable('products');
+  }
+};
