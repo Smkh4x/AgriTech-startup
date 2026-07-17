@@ -21,3 +21,7 @@ Add the following lines to your `.gitignore` file:
 node_modules/
 .env
 ```
+```
+npx sequelize-cli db:migrate // up structure in databse
+
+```

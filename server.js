@@ -1,4 +1,4 @@
-import sequelize from "./config/config.js";
+import sequelize from "./config/database.js";
 import ps from "ps";
 import express from "express";
 
