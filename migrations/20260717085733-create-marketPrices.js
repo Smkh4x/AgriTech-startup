@@ -6,21 +6,21 @@ module.exports = {
 
     await queryInterface.createTable('marketPrices', {
       id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
       },
       pricePerKg: {
-        type: DataTypes.FLOAT,
+        type: Sequelize.FLOAT,
         allowNull: true
       },
       priceDate: {
-        type: DataTypes.DATE,
+        type: Sequelize.DATE,
         allowNull: true
       },
       marketId: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: true,
         references: {
           model: "markets",
@@ -28,7 +28,7 @@ module.exports = {
         }
       },
       productId: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: true,
         references: {
           model: "products",

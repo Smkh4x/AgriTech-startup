@@ -1,35 +1,36 @@
+import { Model } from "sequelize";
 
 export default {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     await queryInterface.createTable("farmers", {
           id: {
-              type: DataTypes.INTEGER,
+              type: Sequelize.INTEGER,
               primaryKey: true,
               allowNull: false,
               autoIncrement: true
           },
           firstName: {
-              type: DataTypes.STRING,
+              type: Sequelize.STRING,
               allowNull: true
           },
           lastName: {
-              type: DataTypes.STRING,
+              type: Sequelize.STRING,
               allowNull: true
           },
           phone: {
-              type: DataTypes.STRING,
+              type: Sequelize.STRING,
               allowNull: true
           },
           region: {
-              type: DataTypes.STRING,
+              type: Sequelize.STRING,
               allowNull: true
           },
           userId: {
-              type: DataTypes.INTEGER,
+              type: Sequelize.INTEGER,
               allowNull: true,
 
               references: {
-                module: "users",
+                Model: "users",
                 key: "id"
               }
           },

@@ -5,25 +5,25 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('harvests', {
       id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
       },
       quantity: {
-        type: DataTypes.FLOAT,
+        type: Sequelize.FLOAT,
         allowNull: true
       },
       harvestDate: {
-        type: DataTypes.DATE,
+        type: Sequelize.DATE,
         allowNull: true
       },
       status: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: true
       },
       plotId: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: true,
         references: {
           model: "plots",
@@ -31,7 +31,7 @@ module.exports = {
         }
       },
       productId: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: true,
         references: {
           model: "products",

@@ -5,21 +5,21 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('markets', {
       id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true
       },
       name: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: true
       },
       city: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: true
       },
       region: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: true
       }
     });

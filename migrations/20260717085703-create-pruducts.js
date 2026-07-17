@@ -2,21 +2,21 @@ export default {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable('products', {
     id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true
     },
     name: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: true
     },
     category: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: true
     },
     unit: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: true
     }
     });

@@ -5,24 +5,24 @@ module.exports = {
   async up (queryInterface, Sequelize) {
      await queryInterface.createTable('offers', {
           id: {
-              type: DataTypes.INTEGER,
+              type: Sequelize.INTEGER,
               primaryKey: true,
               autoIncrement: true
           },
           name: {
-              type: DataTypes.STRING,
+              type: Sequelize.STRING,
               allowNull: true
           },
           area: {
-              type: DataTypes.FLOAT,
+              type: Sequelize.FLOAT,
               allowNull: true
           },
           municiality: {
-              type: DataTypes.STRING,
+              type: Sequelize.STRING,
               allowNull: true
           },
           farmerId: {
-              type: DataTypes.INTEGER,
+              type: Sequelize.INTEGER,
               allowNull: true,
               references: {
                 model: "farmers",
