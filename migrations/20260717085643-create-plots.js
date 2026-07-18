@@ -28,7 +28,9 @@ module.exports = {
         references: {
           model: "farmers",
           key: "id"
-        }
+        },
+            onUpdate: "CASCADE",
+            onDelete: "CASCADE"
       }
     });
   },

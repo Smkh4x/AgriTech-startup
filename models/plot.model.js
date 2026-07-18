@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../config/config";
+import sequelize from "../config/database.js";
 
-const Plot = sequelize.define("plot", {
+const Plot = sequelize.define("plots", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -25,11 +25,11 @@ const Plot = sequelize.define("plot", {
     }
 
 }, {
-    tableName: "plot",
+    tableName: "plots",
     timestamps: false
 
 
 }
 
 )
-export default plot
+export default Plot

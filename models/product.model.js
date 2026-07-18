@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../config/config";
+import sequelize from "../config/database.js";
 
-const Product = sequelize.define("product", {
+const Product = sequelize.define("products", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -20,7 +20,7 @@ const Product = sequelize.define("product", {
         allowNull: true
     }
 }, {
-    tableName: "product",
+    tableName: "products",
     timestamps: false
 
 }

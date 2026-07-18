@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../config/database";
+import sequelize from "../config/database.js";
 
-const Farmer = sequelize.define("Farmer", {
+const Farmer = sequelize.define("Farmers", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -29,11 +29,11 @@ const Farmer = sequelize.define("Farmer", {
     }
 
 }, {
-    tableName: "Farmer",
+    tableName: "Farmers",
     timestamps: false
 
 
 }
 
 )
-export default farmer
+export default Farmer

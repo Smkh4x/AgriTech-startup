@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
 
 class User {
@@ -9,79 +10,83 @@ class User {
     +updatedAt : DateTime
 }
 
-class Agriculteur {
+class Farmer {
     +id : Integer
-    +nom : String
+    +firstName : String
+    +lastName : String
+    +phone : String
     +region : String
-    +telephone : String
     +userId : Integer
     +createdAt : DateTime
     +updatedAt : DateTime
 }
 
-class Parcelle {
+class Plot {
     +id : Integer
-    +nom : String
-    +surface : Float
-    +cultureActuelle : String
-    +agriculteurId : Integer
+    +name : String
+    +area : Float
+    +municipality : String
+    +farmerId : Integer
     +createdAt : DateTime
     +updatedAt : DateTime
 }
 
-class Produit {
+class Product {
     +id : Integer
-    +nom : String
-    +categorie : String
+    +name : String
+    +category : String
+    +unit : String
     +createdAt : DateTime
     +updatedAt : DateTime
 }
 
-class Marche {
+class Harvest {
     +id : Integer
-    +nom : String
-    +ville : String
+    +quantity : Float
+    +harvestDate : Date
+    +status : String
+    +plotId : Integer
+    +productId : Integer
+    +createdAt : DateTime
+    +updatedAt : DateTime
+}
+
+class Market {
+    +id : Integer
+    +name : String
+    +city : String
     +region : String
     +createdAt : DateTime
     +updatedAt : DateTime
 }
 
-class PrixMarche {
+class MarketPrice {
     +id : Integer
-    +marcheId : Integer
-    +produitId : Integer
-    +prixMoyen : Decimal
-    +dateReleve : Date
+    +pricePerKg : Float
+    +priceDate : Date
+    +marketId : Integer
+    +productId : Integer
     +createdAt : DateTime
     +updatedAt : DateTime
 }
 
-class Recolte {
+class Offer {
     +id : Integer
-    +parcelleId : Integer
-    +produitId : Integer
-    +quantite : Decimal
-    +dateRecolte : Date
-    +statut : String
+    +quantity : Float
+    +askingPrice : Float
+    +status : String
+    +harvestId : Integer
+    +marketId : Integer
     +createdAt : DateTime
     +updatedAt : DateTime
 }
 
-class Offre {
-    +id : Integer
-    +recolteId : Integer
-    +quantiteProposee : Decimal
-    +prixDemande : Decimal
-    +dateOffre : Date
-    +statut : String
-    +createdAt : DateTime
-    +updatedAt : DateTime
-}
-
-User "1" --> "0..1" Agriculteur : has profile
-Agriculteur "1" --> "0..*" Parcelle : owns
-Parcelle "1" --> "0..*" Recolte : harvested from
-Produit "1" --> "0..*" Recolte : is type of
-Produit "1" --> "0..*" PrixMarche : has market prices
-Marche "1" --> "0..*" PrixMarche : records price at
-Recolte "1" --> "0..*" Offre : listed in
+User "1" --> "0..1" Farmer : has profile
+Farmer "1" --> "0..*" Plot : owns
+Plot "1" --> "0..*" Harvest : produces
+Product "1" --> "0..*" Harvest : harvested as
+Market "1" --> "0..*" MarketPrice : records prices
+Product "1" --> "0..*" MarketPrice : has market prices
+Harvest "1" --> "0..*" Offer : generates
+Market "1" --> "0..*" Offer : listed at
+```

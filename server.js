@@ -1,25 +1,26 @@
-import sequelize from "./config/database.js";
-import ps from "ps";
 import express from "express";
-import dotenv from "dotenv"
+import "dotenv/config";
+import sequelize from "./config/database.js";
 
-dotenv.config();
-const app = express()
-app.use(express.json())
+
+
+const app = express();
+app.use(express.json());
+
+const PORT = process.env.PORT || 3004
 
 const main = async () => {
     try {
-           await sequelize.authenticate();
-    console.log("database is connect");
-    app.listen(3000, () =>  {
-        console.log("server is running on port 3000")
+        await sequelize.authenticate();
+        console.log("database is connect");
 
-    })
- 
-    } catch (err) {
-        console.log({error: err.message})
+        app.listen(PORT, () => {
+            console.log(`server is running on port ${PORT}`);
+        });
         
+    } catch (err) {
+        console.error({error: err.message});
     }
+};
 
-}
-main()
+main();

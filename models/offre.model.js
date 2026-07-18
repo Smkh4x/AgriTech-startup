@@ -1,31 +1,43 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../config/config";
+import sequelize from "../config/database.js";
 
-const Offer = sequelize.define("offer", {
+const Offer = sequelize.define("offers", {
     id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    name: {
-        type: DataTypes.STRING,
+    quantity: {
+        type: Sequelize.FLOAT,
         allowNull: true
     },
-    area: {
-        type: DataTypes.FLOAT,
+    askingPrice: {
+        type: Sequelize.FLOAT,
         allowNull: true
     },
-    municiality: {
-        type: DataTypes.STRING,
+    status: {
+        type: Sequelize.STRING,
         allowNull: true
     },
-    farmerId: {
-        type: DataTypes.INTEGER,
-        allowNull: true
+    harvestId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+            model: "harvests",
+            key: "id"
+        }
+    },
+    marketId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+            model: "markets",
+            key: "id"
+        }
     }
 
 }, {
-    tableName: "offer",
+    tableName: "offers",
     timestamps: false
 
 

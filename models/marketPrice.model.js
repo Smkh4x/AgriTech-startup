@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../config/config";
+import sequelize from "../config/database.js";
 
-const MarketPrice = sequelize.define("marketPrice", {
+const MarketPrice = sequelize.define("marketPrices", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -25,11 +25,11 @@ const MarketPrice = sequelize.define("marketPrice", {
     },
 
 }, {
-    tableName: "marketPrice",
+    tableName: "marketPrices",
     timestamps: false
 
 
 }
 
 )
-export default Offer
+export default MarketPrice

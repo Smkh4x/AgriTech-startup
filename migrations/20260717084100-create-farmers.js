@@ -30,7 +30,7 @@ export default {
               allowNull: true,
 
               references: {
-                Model: "users",
+                model: "users",
                 key: "id"
               }
           },
