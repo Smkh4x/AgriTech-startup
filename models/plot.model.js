@@ -15,7 +15,7 @@ const Plot = sequelize.define("plots", {
         type: DataTypes.FLOAT,
         allowNull: true
     },
-    municiality: {
+    commune: {
         type: DataTypes.STRING,
         allowNull: true
     },

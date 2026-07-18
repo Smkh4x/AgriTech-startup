@@ -1,4 +1,4 @@
-module.exports = {
+export default  {
   async up(queryInterface, Sequelize) {
 
     await queryInterface.bulkInsert("offers", [
@@ -9,8 +9,7 @@ module.exports = {
         status: "pending",
         harvestId: 1,
         marketId: 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
 
       {
@@ -19,8 +18,7 @@ module.exports = {
         status: "sold",
         harvestId: 2,
         marketId: 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
 
       {
@@ -29,8 +27,7 @@ module.exports = {
         status: "accepted",
         harvestId: 3,
         marketId: 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
 
       {
@@ -39,8 +36,7 @@ module.exports = {
         status: "rejected",
         harvestId: 4,
         marketId: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
 
       {
@@ -49,8 +45,7 @@ module.exports = {
         status: "sold",
         harvestId: 5,
         marketId: 3,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
 
       {
@@ -59,8 +54,7 @@ module.exports = {
         status: "pending",
         harvestId: 6,
         marketId: 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
 
       {
@@ -69,8 +63,7 @@ module.exports = {
         status: "accepted",
         harvestId: 7,
         marketId: 4,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
 
       {
@@ -79,8 +72,7 @@ module.exports = {
         status: "sold",
         harvestId: 8,
         marketId: 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
 
       {
@@ -89,8 +81,7 @@ module.exports = {
         status: "pending",
         harvestId: 9,
         marketId: 6,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
 
       {
@@ -99,8 +90,7 @@ module.exports = {
         status: "pending",
         harvestId: 10,
         marketId: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       }
 
     ]);

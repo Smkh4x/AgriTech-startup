@@ -18,7 +18,7 @@ module.exports = {
         type: Sequelize.FLOAT,
         allowNull: true
       },
-      municiality: {
+      commune: {
         type: Sequelize.STRING,
         allowNull: true
       },

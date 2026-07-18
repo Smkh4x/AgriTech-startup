@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 
-module.exports = {
+export default {
   async up(queryInterface, Sequelize) {
 
     const hash = await bcrypt.hash("youssef", 10);
@@ -20,7 +20,7 @@ module.exports = {
         lastName: "Benali",
         email: "agent@fellah.ma",
         password: hash,
-        role: "agent",
+        role: "user",
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -29,7 +29,7 @@ module.exports = {
         lastName: "El Amrani",
         email: "ahmed@gmail.com",
         password: hash,
-        role: "farmer",
+        role: "user",
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -38,7 +38,7 @@ module.exports = {
         lastName: "Bennani",
         email: "fatima@gmail.com",
         password: hash,
-        role: "farmer",
+        role: "user",
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -47,7 +47,7 @@ module.exports = {
         lastName: "Lahlou",
         email: "buyer@gmail.com",
         password: hash,
-        role: "buyer",
+        role: "user",
         createdAt: new Date(),
         updatedAt: new Date()
       }

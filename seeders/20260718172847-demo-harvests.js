@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   async up(queryInterface, Sequelize) {
 
     await queryInterface.bulkInsert("harvests", [
@@ -8,8 +8,7 @@ module.exports = {
         status: "ready",
         plotId: 1,
         productId: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 450,
@@ -17,8 +16,7 @@ module.exports = {
         status: "sold",
         plotId: 2,
         productId: 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 220,
@@ -26,8 +24,7 @@ module.exports = {
         status: "ready",
         plotId: 3,
         productId: 3,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 170,
@@ -35,8 +32,7 @@ module.exports = {
         status: "lost",
         plotId: 4,
         productId: 5,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 800,
@@ -44,8 +40,7 @@ module.exports = {
         status: "sold",
         plotId: 5,
         productId: 10,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 600,
@@ -53,8 +48,7 @@ module.exports = {
         status: "ready",
         plotId: 6,
         productId: 6,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 950,
@@ -62,8 +56,7 @@ module.exports = {
         status: "ready",
         plotId: 7,
         productId: 7,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 180,
@@ -71,8 +64,7 @@ module.exports = {
         status: "sold",
         plotId: 8,
         productId: 8,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 90,
@@ -80,8 +72,7 @@ module.exports = {
         status: "ready",
         plotId: 9,
         productId: 9,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 500,
@@ -89,8 +80,7 @@ module.exports = {
         status: "ready",
         plotId: 10,
         productId: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 340,
@@ -98,8 +88,7 @@ module.exports = {
         status: "sold",
         plotId: 1,
         productId: 4,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 280,
@@ -107,8 +96,7 @@ module.exports = {
         status: "ready",
         plotId: 2,
         productId: 5,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 720,
@@ -116,8 +104,7 @@ module.exports = {
         status: "ready",
         plotId: 3,
         productId: 6,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 410,
@@ -125,8 +112,7 @@ module.exports = {
         status: "lost",
         plotId: 6,
         productId: 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       },
       {
         quantity: 150,
@@ -134,8 +120,7 @@ module.exports = {
         status: "ready",
         plotId: 8,
         productId: 3,
-        createdAt: new Date(),
-        updatedAt: new Date()
+ 
       }
     ]);
 
