@@ -3,24 +3,24 @@ import sequelize from "../config/database.js";
 
 const Offer = sequelize.define("offers", {
     id: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     quantity: {
-        type: Sequelize.FLOAT,
+        type: DataTypes.FLOAT,
         allowNull: true
     },
     askingPrice: {
-        type: Sequelize.FLOAT,
+        type: DataTypes.FLOAT,
         allowNull: true
     },
     status: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: true
     },
     harvestId: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: true,
         references: {
             model: "harvests",
@@ -28,7 +28,7 @@ const Offer = sequelize.define("offers", {
         }
     },
     marketId: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: true,
         references: {
             model: "markets",

@@ -26,16 +26,24 @@ const User = sequelize.define("users", {
     role: {
         type: DataTypes.ENUM(
             "admin",
-            "farmer",
             "user"
         ),
         defaultValue: "user",
         allowNull: true
     },
+          createdAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+      },
+
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
 
 }, {
     tableName: "users",
-    timestamps: false
+    timestamps: true
 
 
 }

@@ -1,13 +1,11 @@
-import User from "./user.model";
-import Farmer from "./farmer.model";
-import Harvest from "./harvest.model";
-import Market from "./market.model";
-import MarketPrice from "./marketPrice.model";
-import Product from "./product.model";
-import Plot from "./plot.model";
-import Offre from "./offre.model"
-
-
+import User from "./user.model.js";
+import Farmer from "./farmer.model.js";
+import Harvest from "./harvest.model.js";
+import Market from "./market.model.js";
+import MarketPrice from "./marketPrice.model.js";
+import Product from "./product.model.js";
+import Plot from "./plot.model.js";
+import Offre from "./offre.model.js"
 
 
 User.hasOne(Farmer, {
@@ -65,3 +63,4 @@ Market.hasMany(Offre, {
 Offre.belongsTo(Market, {
     foreignKey: "marketId"
 })
+

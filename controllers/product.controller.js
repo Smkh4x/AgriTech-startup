@@ -1,16 +1,14 @@
-import Harvest from "../models/harvest.model.js";
-import Plot from "../models/plot.model.js";
 import Product from "../models/product.model.js";
 
-class HarvestController {
+class ProductController {
 
     create = async (req, res) => {
 
         try {
 
-            const harvest = await Harvest.create(req.body);
+            const product = await Product.create(req.body);
 
-            res.status(201).json(harvest);
+            res.status(201).json(product);
 
         } catch (err) {
 
@@ -26,16 +24,9 @@ class HarvestController {
 
         try {
 
-            const harvests = await Harvest.findAll({
+            const products = await Product.findAll();
 
-                include: [
-                    Plot,
-                    Product
-                ]
-
-            });
-
-            res.status(200).json(harvests);
+            res.status(200).json(products);
 
         } catch (err) {
 
@@ -51,24 +42,17 @@ class HarvestController {
 
         try {
 
-            const harvest = await Harvest.findByPk(req.params.id, {
+            const product = await Product.findByPk(req.params.id);
 
-                include: [
-                    Plot,
-                    Product
-                ]
-
-            });
-
-            if (!harvest) {
+            if (!product) {
 
                 return res.status(404).json({
-                    message: "Harvest not found"
+                    message: "Product not found"
                 });
 
             }
 
-            res.status(200).json(harvest);
+            res.status(200).json(product);
 
         } catch (err) {
 
@@ -84,19 +68,19 @@ class HarvestController {
 
         try {
 
-            const harvest = await Harvest.findByPk(req.params.id);
+            const product = await Product.findByPk(req.params.id);
 
-            if (!harvest) {
+            if (!product) {
 
                 return res.status(404).json({
-                    message: "Harvest not found"
+                    message: "Product not found"
                 });
 
             }
 
-            await harvest.update(req.body);
+            await product.update(req.body);
 
-            res.status(200).json(harvest);
+            res.status(200).json(product);
 
         } catch (err) {
 
@@ -112,20 +96,20 @@ class HarvestController {
 
         try {
 
-            const harvest = await Harvest.findByPk(req.params.id);
+            const product = await Product.findByPk(req.params.id);
 
-            if (!harvest) {
+            if (!product) {
 
                 return res.status(404).json({
-                    message: "Harvest not found"
+                    message: "Product not found"
                 });
 
             }
 
-            await harvest.destroy();
+            await product.destroy();
 
             res.status(200).json({
-                message: "Harvest deleted successfully"
+                message: "Product deleted successfully"
             });
 
         } catch (err) {
@@ -140,4 +124,4 @@ class HarvestController {
 
 }
 
-export default new HarvestController();
+export default new ProductController();

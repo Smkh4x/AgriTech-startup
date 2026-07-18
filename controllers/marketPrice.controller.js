@@ -1,16 +1,16 @@
-import Offer from "../models/offre.model.js";
-import Harvest from "../models/harvest.model.js";
+import MarketPrice from "../models/marketPrice.model.js";
 import Market from "../models/market.model.js";
+import Product from "../models/product.model.js";
 
-class OfferController {
+class MarketPriceController {
 
     create = async (req, res) => {
 
         try {
 
-            const offer = await Offer.create(req.body);
+            const marketPrice = await MarketPrice.create(req.body);
 
-            res.status(201).json(offer);
+            res.status(201).json(marketPrice);
 
         } catch (err) {
 
@@ -26,16 +26,16 @@ class OfferController {
 
         try {
 
-            const offers = await Offer.findAll({
+            const prices = await MarketPrice.findAll({
 
                 include: [
-                    Harvest,
-                    Market
+                    Market,
+                    Product
                 ]
 
             });
 
-            res.status(200).json(offers);
+            res.status(200).json(prices);
 
         } catch (err) {
 
@@ -51,24 +51,24 @@ class OfferController {
 
         try {
 
-            const offer = await Offer.findByPk(req.params.id, {
+            const price = await MarketPrice.findByPk(req.params.id, {
 
                 include: [
-                    Harvest,
-                    Market
+                    Market,
+                    Product
                 ]
 
             });
 
-            if (!offer) {
+            if (!price) {
 
                 return res.status(404).json({
-                    message: "Offer not found"
+                    message: "Price not found"
                 });
 
             }
 
-            res.status(200).json(offer);
+            res.status(200).json(price);
 
         } catch (err) {
 
@@ -84,19 +84,19 @@ class OfferController {
 
         try {
 
-            const offer = await Offer.findByPk(req.params.id);
+            const price = await MarketPrice.findByPk(req.params.id);
 
-            if (!offer) {
+            if (!price) {
 
                 return res.status(404).json({
-                    message: "Offer not found"
+                    message: "Price not found"
                 });
 
             }
 
-            await offer.update(req.body);
+            await price.update(req.body);
 
-            res.status(200).json(offer);
+            res.status(200).json(price);
 
         } catch (err) {
 
@@ -112,20 +112,20 @@ class OfferController {
 
         try {
 
-            const offer = await Offer.findByPk(req.params.id);
+            const price = await MarketPrice.findByPk(req.params.id);
 
-            if (!offer) {
+            if (!price) {
 
                 return res.status(404).json({
-                    message: "Offer not found"
+                    message: "Price not found"
                 });
 
             }
 
-            await offer.destroy();
+            await price.destroy();
 
             res.status(200).json({
-                message: "Offer deleted successfully"
+                message: "Price deleted successfully"
             });
 
         } catch (err) {
@@ -140,4 +140,4 @@ class OfferController {
 
 }
 
-export default new OfferController();
+export default new MarketPriceController();
