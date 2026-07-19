@@ -1,4 +1,8 @@
+import Harvest from "../models/harvest.model.js";
 import Product from "../models/product.model.js";
+import MarketPrice from "../models/marketPrice.model.js";
+import Market from "../models/market.model.js";
+import getBestPrice from "../services/product.service.js"
 
 class ProductController {
 
@@ -42,7 +46,11 @@ class ProductController {
 
         try {
 
-            const product = await Product.findByPk(req.params.id);
+            const product = await Product.findByPk(req.params.id, {
+                include: [
+                    Harvest
+                ]
+            });
 
             if (!product) {
 
@@ -53,6 +61,31 @@ class ProductController {
             }
 
             res.status(200).json(product);
+
+        } catch (err) {
+
+            res.status(500).json({
+                error: err.message
+            });
+
+        }
+
+    }
+    getBestPrix = async (req, res) => {
+
+        try {
+
+            const bestProduct = await getBestPrice(req.params.id);
+
+            if (!bestProduct) {
+
+                return res.status(404).json({
+                    message: "Product not found"
+                });
+
+            }
+
+            res.status(200).json(bestProduct);
 
         } catch (err) {
 

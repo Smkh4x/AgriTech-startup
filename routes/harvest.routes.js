@@ -9,6 +9,8 @@ router.get("/", HarvestController.getAll);
 
 router.get("/:id", HarvestController.getById);
 
+router.get("/:id/sallOffer", HarvestController.sellHarvest);
+
 router.put("/:id", HarvestController.update);
 
 router.delete("/:id", HarvestController.remove);

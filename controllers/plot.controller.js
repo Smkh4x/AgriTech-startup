@@ -1,4 +1,7 @@
+import Farmer from "../models/farmer.model.js";
+import Harvest from "../models/harvest.model.js";
 import Plot from "../models/plot.model.js";
+import Product from "../models/product.model.js";
 
 class PlotController {
 
@@ -42,7 +45,13 @@ class PlotController {
 
         try {
 
-            const plot = await Plot.findByPk(req.params.id);
+            const plot = await Plot.findByPk(req.params.id, {
+                include: [
+                    Farmer,
+                    Harvest,
+
+                ]
+            });
 
             if (!plot) {
 

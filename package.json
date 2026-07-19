@@ -13,10 +13,10 @@
   "name": "fala7-backend",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module.cjs",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --trace-warnings --watch server.js",
+    "start": "node --watch server.js",
      "db:setup": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
   },
   "keywords": [],

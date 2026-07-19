@@ -1,4 +1,5 @@
 import Farmer from "../models/farmer.model.js";
+import Plot from "../models/plot.model.js";
 import User from "../models/user.model.js";
 
 class FarmerController {
@@ -65,6 +66,9 @@ class FarmerController {
                 {
                     model: User,
                     attributes: ["id", "firstName", "lastName", "email", "role"]
+                },
+                {
+                    model: Plot
                 }
             ]
         });

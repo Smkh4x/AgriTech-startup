@@ -9,6 +9,8 @@ router.get("/", ProductController.getAll);
 
 router.get("/:id", ProductController.getById);
 
+router.get("/:id/best-prix", ProductController.getBestPrix);
+
 router.put("/:id", ProductController.update);
 
 router.delete("/:id", ProductController.remove);

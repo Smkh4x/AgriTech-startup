@@ -1,5 +1,6 @@
 import Market from "../models/market.model.js";
 import MarketPrice from "../models/marketPrice.model.js";
+import Offer from "../models/offre.model.js";
 import Product from "../models/product.model.js";
 
 class MarketController {
@@ -75,10 +76,10 @@ class MarketController {
             const market = await Market.findByPk(req.params.id, {
 
                 include: [
-                    {
-                        model: MarketPrice,
-                        include: [Product]
-                    }
+                    
+                        MarketPrice,
+                        Offer
+                    
                 ]
 
             });

@@ -7,7 +7,7 @@ export default {
         harvestDate: "2026-07-10",
         status: "ready",
         plotId: 1,
-        productId: 1,
+        productId: 63,
  
       },
       {
@@ -15,7 +15,7 @@ export default {
         harvestDate: "2026-07-08",
         status: "sold",
         plotId: 2,
-        productId: 2,
+        productId: 64,
  
       },
       {
@@ -23,7 +23,7 @@ export default {
         harvestDate: "2026-07-05",
         status: "ready",
         plotId: 3,
-        productId: 3,
+        productId: 65,
  
       },
       {
@@ -31,7 +31,7 @@ export default {
         harvestDate: "2026-07-02",
         status: "lost",
         plotId: 4,
-        productId: 5,
+        productId: 67,
  
       },
       {
@@ -39,7 +39,7 @@ export default {
         harvestDate: "2026-06-28",
         status: "sold",
         plotId: 5,
-        productId: 10,
+        productId: 68,
  
       },
       {
@@ -47,7 +47,7 @@ export default {
         harvestDate: "2026-07-11",
         status: "ready",
         plotId: 6,
-        productId: 6,
+        productId: 69,
  
       },
       {
@@ -55,7 +55,7 @@ export default {
         harvestDate: "2026-07-09",
         status: "ready",
         plotId: 7,
-        productId: 7,
+        productId: 70,
  
       },
       {
@@ -63,7 +63,7 @@ export default {
         harvestDate: "2026-07-06",
         status: "sold",
         plotId: 8,
-        productId: 8,
+        productId: 71,
  
       },
       {
@@ -71,7 +71,7 @@ export default {
         harvestDate: "2026-07-04",
         status: "ready",
         plotId: 9,
-        productId: 9,
+        productId: 72,
  
       },
       {
@@ -79,7 +79,7 @@ export default {
         harvestDate: "2026-07-03",
         status: "ready",
         plotId: 10,
-        productId: 1,
+        productId: 68,
  
       },
       {
@@ -87,7 +87,7 @@ export default {
         harvestDate: "2026-06-30",
         status: "sold",
         plotId: 1,
-        productId: 4,
+        productId: 69,
  
       },
       {
@@ -95,7 +95,7 @@ export default {
         harvestDate: "2026-07-01",
         status: "ready",
         plotId: 2,
-        productId: 5,
+        productId: 70,
  
       },
       {
@@ -103,15 +103,15 @@ export default {
         harvestDate: "2026-07-12",
         status: "ready",
         plotId: 3,
-        productId: 6,
+        productId: 71,
  
       },
       {
         quantity: 410,
         harvestDate: "2026-07-07",
         status: "lost",
-        plotId: 6,
-        productId: 2,
+        plotId: 4,
+        productId: 72,
  
       },
       {
@@ -119,7 +119,7 @@ export default {
         harvestDate: "2026-07-10",
         status: "ready",
         plotId: 8,
-        productId: 3,
+        productId: 64,
  
       }
     ]);

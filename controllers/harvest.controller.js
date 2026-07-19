@@ -1,4 +1,6 @@
 import Harvest from "../models/harvest.model.js";
+import Market from "../models/market.model.js";
+import Offer from "../models/offre.model.js";
 import Plot from "../models/plot.model.js";
 import Product from "../models/product.model.js";
 
@@ -56,6 +58,43 @@ class HarvestController {
                 include: [
                     Plot,
                     Product
+                ]
+
+            });
+
+            if (!harvest) {
+
+                return res.status(404).json({
+                    message: "Harvest not found"
+                });
+
+            }
+
+            res.status(200).json(harvest);
+
+        } catch (err) {
+
+            res.status(500).json({
+                error: err.message
+            });
+
+        }
+
+    }
+    sellHarvest = async (req, res) => {
+
+        try {
+
+            const harvest = await Harvest.findByPk(req.params.id, {
+
+                include: [
+                    {
+                        model: Offer,
+                        include: [
+                            Market
+                        ]
+
+                    }
                 ]
 
             });

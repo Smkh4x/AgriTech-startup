@@ -6,157 +6,157 @@ export default {
       // ================= TOMATE =================
 
       {
-        price: 6.20,
+        pricePerKg: 6.20,
         priceDate: "2026-07-10",
-        marketId: 2,
-        productId: 1,
+        marketId: 32,
+        productId: 63,
  
       },
       {
-        price: 5.80,
+        pricePerKg: 5.80,
         priceDate: "2026-07-10",
-        marketId: 1,
-        productId: 1,
+        marketId: 31,
+        productId: 63,
  
       },
       {
-        price: 5.30,
+        pricePerKg: 5.30,
         priceDate: "2026-07-10",
-        marketId: 3,
-        productId: 1,
+        marketId: 33,
+        productId: 63,
  
       },
       {
-        price: 5.10,
+        pricePerKg: 5.10,
         priceDate: "2026-07-10",
-        marketId: 4,
-        productId: 1,
+        marketId: 34,
+        productId: 63,
  
       },
 
       // ================= POTATO =================
 
       {
-        price: 3.80,
+        pricePerKg: 3.80,
         priceDate: "2026-07-10",
-        marketId: 1,
-        productId: 2,
+        marketId: 31,
+        productId: 64,
  
       },
       {
-        price: 4.10,
+        pricePerKg: 4.10,
         priceDate: "2026-07-10",
-        marketId: 2,
-        productId: 2,
+        marketId: 32,
+        productId: 64,
  
       },
       {
-        price: 3.90,
+        pricePerKg: 3.90,
         priceDate: "2026-07-10",
-        marketId: 3,
-        productId: 2,
+        marketId: 33,
+        productId: 64,
  
       },
 
       // ================= ONION =================
 
       {
-        price: 4.60,
+        pricePerKg: 4.60,
         priceDate: "2026-07-10",
-        marketId: 1,
-        productId: 3,
+        marketId: 31,
+        productId: 65,
  
       },
       {
-        price: 4.90,
+        pricePerKg: 4.90,
         priceDate: "2026-07-10",
-        marketId: 2,
-        productId: 3,
+        marketId: 32,
+        productId: 65,
  
       },
       {
-        price: 4.40,
+        pricePerKg: 4.40,
         priceDate: "2026-07-10",
-        marketId: 5,
-        productId: 3,
+        marketId: 35,
+        productId: 65,
  
       },
 
       // ================= ORANGE =================
 
       {
-        price: 7.20,
+        pricePerKg: 7.20,
         priceDate: "2026-07-10",
-        marketId: 2,
-        productId: 6,
+        marketId: 32,
+        productId: 66,
  
       },
       {
-        price: 6.80,
+        pricePerKg: 6.80,
         priceDate: "2026-07-10",
-        marketId: 3,
-        productId: 6,
+        marketId: 33,
+        productId: 66,
  
       },
 
       // ================= OLIVE =================
 
       {
-        price: 12.50,
+        pricePerKg: 12.50,
         priceDate: "2026-07-10",
-        marketId: 4,
-        productId: 7,
+        marketId: 34,
+        productId: 67,
  
       },
       {
-        price: 11.90,
+        pricePerKg: 11.90,
         priceDate: "2026-07-10",
-        marketId: 5,
-        productId: 7,
+        marketId: 35,
+        productId: 67,
  
       },
 
       // ================= STRAWBERRY =================
 
       {
-        price: 18.50,
+        pricePerKg: 18.50,
         priceDate: "2026-07-10",
-        marketId: 2,
-        productId: 8,
+        marketId: 32,
+        productId: 68,
  
       },
       {
-        price: 17.20,
+        pricePerKg: 17.20,
         priceDate: "2026-07-10",
-        marketId: 1,
-        productId: 8,
+        marketId: 31,
+        productId: 68,
  
       },
 
       // ================= MINT =================
 
       {
-        price: 3.20,
+        pricePerKg: 3.20,
         priceDate: "2026-07-10",
-        marketId: 6,
-        productId: 9,
+        marketId: 36,
+        productId: 69,
  
       },
 
       // ================= WHEAT =================
 
       {
-        price: 2.90,
+        pricePerKg: 2.90,
         priceDate: "2026-07-10",
-        marketId: 4,
-        productId: 10,
+        marketId: 34,
+        productId: 70,
  
       },
       {
-        price: 3.10,
+        pricePerKg: 3.10,
         priceDate: "2026-07-10",
-        marketId: 3,
-        productId: 10,
+        marketId: 33,
+        productId: 70,
  
       }
 
